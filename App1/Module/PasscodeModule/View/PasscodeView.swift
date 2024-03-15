@@ -158,12 +158,19 @@ extension PasscodeView {
 
 
 extension PasscodeView: PasscodeViewProtocol {
+   
     func passcodeState(state: PasscodeState) {
         passcodeTitle.text = state.getPasscodeLabel()
     }
     
     func enterCode(code: [Int]) {
-        print(code)
+        let tag = code.count + 10
+        
+        (tag...14).forEach {
+            view.viewWithTag($0)?.backgroundColor = .none
+        }
+        
+        view.viewWithTag(tag)?.backgroundColor = .black
     }
     
     
