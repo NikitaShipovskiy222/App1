@@ -39,13 +39,13 @@ class Builder: BuilderProtocol {
         passcodeView.passcodePresenter = presenter
         return passcodeView
     }
-//    static func createTabBarController(sceneDelegate: SceneDelegateProtocol) -> UIViewController {
-//        let tabBarView = TabBarView()
-//        let presenter = TabBarViewPresenter(view: tabBarView)
-//        tabBarView.presenter = presenter
-//        
-//        return tabBarView
-//    }
+    static func createTabBarController(sceneDelegate: SceneDelegateProtocol) -> UIViewController {
+        let tabBarView = TabBarView()
+        let presenter = TabBarViewPresenter(view: tabBarView)
+        tabBarView.presenter = presenter
+        
+        return tabBarView
+    }
     
     static func createMainScreenController() -> UIViewController {
         let mainView = MainSreenView()

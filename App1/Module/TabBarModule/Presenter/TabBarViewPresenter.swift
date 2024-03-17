@@ -14,20 +14,29 @@ protocol TabBarViewPresenterProtocol: AnyObject {
 }
 class TabBarViewPresenter {
     weak var view: TabBarViewProtocol?
+    
     required init(view: TabBarViewProtocol) {
         self.view = view
         self.buildTabBar()
     }
     
-
     
     
     
 }
 
 extension TabBarViewPresenter: TabBarViewPresenterProtocol {
+    
     func buildTabBar() {
-        self.view?.setControllers(controllers: [])
+        let mainSreen = Builder.createMainScreenController()
+        
+        let cameraSreen = Builder.createCameraScreenController()
+     
+        let favoriteSreen = Builder.createFavoritScreenController()
+
+        self.view?.setControllers(controllers: [mainSreen, cameraSreen,favoriteSreen])
     }
 }
+
+
 
