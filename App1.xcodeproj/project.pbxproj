@@ -15,6 +15,19 @@
 		01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67982BA2BF8900D4ACAD /* Builder.swift */; };
 		01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA679B2BA2C1C000D4ACAD /* PasscodePresenter.swift */; };
 		01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA679E2BA2C77C00D4ACAD /* UIVew.ext.swift */; };
+		01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67A12BA4223500D4ACAD /* KeychainManager.swift */; };
+		01CA67A52BA422C000D4ACAD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 01CA67A42BA422BF00D4ACAD /* KeychainAccess */; };
+		01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67A62BA427F000D4ACAD /* StringProtocolExtesion.swift */; };
+		01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67B12BA42EE800D4ACAD /* MainSreenView.swift */; };
+		01CA67B62BA42F2C00D4ACAD /* FavoritView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67B52BA42F2C00D4ACAD /* FavoritView.swift */; };
+		01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67B72BA42F3F00D4ACAD /* CameraView.swift */; };
+		01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67B92BA42F7400D4ACAD /* TabBarView.swift */; };
+		01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67BB2BA42FA700D4ACAD /* TabBarViewPresenter.swift */; };
+		01CA67BE2BA433A600D4ACAD /* MainSreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67BD2BA433A600D4ACAD /* MainSreenPresenter.swift */; };
+		01CA67C02BA6CFFD00D4ACAD /* MainPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67BF2BA6CFFC00D4ACAD /* MainPostCell.swift */; };
+		01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C12BA6D05800D4ACAD /* MainPostHeader.swift */; };
+		01CA67C42BA6D24600D4ACAD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C32BA6D24600D4ACAD /* File.swift */; };
+		01CA67C62BA6D25C00D4ACAD /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C52BA6D25C00D4ACAD /* PostItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +41,18 @@
 		01CA67982BA2BF8900D4ACAD /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		01CA679B2BA2C1C000D4ACAD /* PasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodePresenter.swift; sourceTree = "<group>"; };
 		01CA679E2BA2C77C00D4ACAD /* UIVew.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVew.ext.swift; sourceTree = "<group>"; };
+		01CA67A12BA4223500D4ACAD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		01CA67A62BA427F000D4ACAD /* StringProtocolExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtesion.swift; sourceTree = "<group>"; };
+		01CA67B12BA42EE800D4ACAD /* MainSreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSreenView.swift; sourceTree = "<group>"; };
+		01CA67B52BA42F2C00D4ACAD /* FavoritView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritView.swift; sourceTree = "<group>"; };
+		01CA67B72BA42F3F00D4ACAD /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		01CA67B92BA42F7400D4ACAD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		01CA67BB2BA42FA700D4ACAD /* TabBarViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewPresenter.swift; sourceTree = "<group>"; };
+		01CA67BD2BA433A600D4ACAD /* MainSreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSreenPresenter.swift; sourceTree = "<group>"; };
+		01CA67BF2BA6CFFC00D4ACAD /* MainPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostCell.swift; sourceTree = "<group>"; };
+		01CA67C12BA6D05800D4ACAD /* MainPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostHeader.swift; sourceTree = "<group>"; };
+		01CA67C32BA6D24600D4ACAD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		01CA67C52BA6D25C00D4ACAD /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CA67A52BA422C000D4ACAD /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +86,7 @@
 		01CA677B2BA2BD1400D4ACAD /* App1 */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67A02BA4221800D4ACAD /* KeychainManager */,
 				01CA679D2BA2C76500D4ACAD /* Extesion */,
 				01CA679A2BA2C01D00D4ACAD /* Common */,
 				01CA67972BA2BF7900D4ACAD /* Belder */,
@@ -74,7 +101,12 @@
 		01CA67902BA2BE9800D4ACAD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67B02BA42EB100D4ACAD /* CameraModule */,
+				01CA67AF2BA42E9E00D4ACAD /* FavoriteModule */,
+				01CA67AB2BA42DF100D4ACAD /* MainScreenModule */,
+				01CA67A82BA42DAF00D4ACAD /* TabBarModule */,
 				01CA67912BA2BEF300D4ACAD /* PasscodeModule */,
+				01CA67C32BA6D24600D4ACAD /* File.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -133,8 +165,110 @@
 			isa = PBXGroup;
 			children = (
 				01CA679E2BA2C77C00D4ACAD /* UIVew.ext.swift */,
+				01CA67A62BA427F000D4ACAD /* StringProtocolExtesion.swift */,
 			);
 			path = Extesion;
+			sourceTree = "<group>";
+		};
+		01CA67A02BA4221800D4ACAD /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67A12BA4223500D4ACAD /* KeychainManager.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
+		01CA67A82BA42DAF00D4ACAD /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67AA2BA42DCA00D4ACAD /* Presenter */,
+				01CA67A92BA42DBE00D4ACAD /* View */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		01CA67A92BA42DBE00D4ACAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B92BA42F7400D4ACAD /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01CA67AA2BA42DCA00D4ACAD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67BB2BA42FA700D4ACAD /* TabBarViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01CA67AB2BA42DF100D4ACAD /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67AE2BA42E3800D4ACAD /* Model */,
+				01CA67AD2BA42E0700D4ACAD /* Presenter */,
+				01CA67AC2BA42E0000D4ACAD /* View */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		01CA67AC2BA42E0000D4ACAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B12BA42EE800D4ACAD /* MainSreenView.swift */,
+				01CA67BF2BA6CFFC00D4ACAD /* MainPostCell.swift */,
+				01CA67C12BA6D05800D4ACAD /* MainPostHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01CA67AD2BA42E0700D4ACAD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67BD2BA433A600D4ACAD /* MainSreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		01CA67AE2BA42E3800D4ACAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67C52BA6D25C00D4ACAD /* PostItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01CA67AF2BA42E9E00D4ACAD /* FavoriteModule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B42BA42EFB00D4ACAD /* View */,
+			);
+			path = FavoriteModule;
+			sourceTree = "<group>";
+		};
+		01CA67B02BA42EB100D4ACAD /* CameraModule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B32BA42EF200D4ACAD /* View */,
+			);
+			path = CameraModule;
+			sourceTree = "<group>";
+		};
+		01CA67B32BA42EF200D4ACAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B72BA42F3F00D4ACAD /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01CA67B42BA42EFB00D4ACAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67B52BA42F2C00D4ACAD /* FavoritView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +287,9 @@
 			dependencies = (
 			);
 			name = App1;
+			packageProductDependencies = (
+				01CA67A42BA422BF00D4ACAD /* KeychainAccess */,
+			);
 			productName = App1;
 			productReference = 01CA67792BA2BD1400D4ACAD /* App1.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 01CA67702BA2BD1400D4ACAD;
+			packageReferences = (
+				01CA67A32BA422BF00D4ACAD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 01CA677A2BA2BD1400D4ACAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,12 +347,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CA67C62BA6D25C00D4ACAD /* PostItem.swift in Sources */,
+				01CA67B62BA42F2C00D4ACAD /* FavoritView.swift in Sources */,
 				01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */,
 				01CA67952BA2BF5800D4ACAD /* PasscodeView.swift in Sources */,
+				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
+				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
+				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
 				01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */,
+				01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */,
+				01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */,
+				01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */,
+				01CA67C42BA6D24600D4ACAD /* File.swift in Sources */,
 				01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */,
 				01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */,
+				01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */,
+				01CA67C02BA6CFFD00D4ACAD /* MainPostCell.swift in Sources */,
+				01CA67BE2BA433A600D4ACAD /* MainSreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +577,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01CA67A32BA422BF00D4ACAD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01CA67A42BA422BF00D4ACAD /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01CA67A32BA422BF00D4ACAD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01CA67712BA2BD1400D4ACAD /* Project object */;
 }
