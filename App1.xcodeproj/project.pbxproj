@@ -28,6 +28,8 @@
 		01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C12BA6D05800D4ACAD /* MainPostHeader.swift */; };
 		01CA67C42BA6D24600D4ACAD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C32BA6D24600D4ACAD /* File.swift */; };
 		01CA67C62BA6D25C00D4ACAD /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C52BA6D25C00D4ACAD /* PostItem.swift */; };
+		01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C72BA8195800D4ACAD /* Date.ext.swift */; };
+		01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		01CA67C12BA6D05800D4ACAD /* MainPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostHeader.swift; sourceTree = "<group>"; };
 		01CA67C32BA6D24600D4ACAD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		01CA67C52BA6D25C00D4ACAD /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
+		01CA67C72BA8195800D4ACAD /* Date.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.ext.swift; sourceTree = "<group>"; };
+		01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplication.ext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			children = (
 				01CA679E2BA2C77C00D4ACAD /* UIVew.ext.swift */,
 				01CA67A62BA427F000D4ACAD /* StringProtocolExtesion.swift */,
+				01CA67C72BA8195800D4ACAD /* Date.ext.swift */,
+				01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */,
 			);
 			path = Extesion;
 			sourceTree = "<group>";
@@ -352,7 +358,9 @@
 				01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */,
 				01CA67952BA2BF5800D4ACAD /* PasscodeView.swift in Sources */,
 				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
+				01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */,
 				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
+				01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */,
 				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
 				01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */,

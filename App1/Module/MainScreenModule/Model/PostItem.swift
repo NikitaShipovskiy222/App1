@@ -6,18 +6,23 @@
 //
 
 import Foundation
-import CoreLocation
+//import UIKit
+//import CoreLocation
 
 class PostDate: Identifiable{
     let id = UUID().uuidString
     let items: [PostItem]
     let date: Date
     
+    
+    //MARK: - Init
     init(items: [PostItem], date: Date) {
         self.items = items
         self.date = date
     }
     
+    
+    //MARK: - MOCKDATE
     static func getMockDate() -> [PostDate] {
         [
             PostDate(items: [
@@ -42,7 +47,7 @@ class PostDate: Identifiable{
 
 class PostItem: Identifiable {
     let id = UUID().uuidString
-    let photos: [String]?
+    let photos: [String]
     let comments: [Comment]?
     let tags: [String]?
     let description: String?

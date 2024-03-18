@@ -52,7 +52,7 @@ class PasscodeView: UIViewController {
         }
     }(UIButton(primaryAction: deleteCodeAction))
 
-    lazy var enterCodeAction = UIAction { [weak self]sender in
+    private lazy var enterCodeAction = UIAction { [weak self] sender in
         guard
             let self = self,
             let sender = sender.sender as? UIButton
@@ -60,7 +60,7 @@ class PasscodeView: UIViewController {
         
         self.passcodePresenter.enterPasscode(number: sender.tag)
     }
-    lazy var deleteCodeAction = UIAction { [weak self]sender in
+    private lazy var deleteCodeAction = UIAction { [weak self]sender in
         guard
             let self = self,
             let sender = sender.sender as? UIButton
