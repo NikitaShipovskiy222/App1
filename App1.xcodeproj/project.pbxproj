@@ -30,6 +30,8 @@
 		01CA67C62BA6D25C00D4ACAD /* PostItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C52BA6D25C00D4ACAD /* PostItem.swift */; };
 		01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C72BA8195800D4ACAD /* Date.ext.swift */; };
 		01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */; };
+		01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67CD2BA961CE00D4ACAD /* TagCollectionView.swift */; };
+		01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		01CA67C52BA6D25C00D4ACAD /* PostItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItem.swift; sourceTree = "<group>"; };
 		01CA67C72BA8195800D4ACAD /* Date.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.ext.swift; sourceTree = "<group>"; };
 		01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplication.ext.swift; sourceTree = "<group>"; };
+		01CA67CD2BA961CE00D4ACAD /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
+		01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		01CA677B2BA2BD1400D4ACAD /* App1 */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67CB2BA961AB00D4ACAD /* Helpers */,
 				01CA67A02BA4221800D4ACAD /* KeychainManager */,
 				01CA679D2BA2C76500D4ACAD /* Extesion */,
 				01CA679A2BA2C01D00D4ACAD /* Common */,
@@ -277,6 +282,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		01CA67CB2BA961AB00D4ACAD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67CC2BA961B500D4ACAD /* TagCollection */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		01CA67CC2BA961B500D4ACAD /* TagCollection */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67CD2BA961CE00D4ACAD /* TagCollectionView.swift */,
+				01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */,
+			);
+			path = TagCollection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,10 +386,12 @@
 				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
 				01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */,
+				01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */,
 				01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */,
 				01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */,
 				01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */,
 				01CA67C42BA6D24600D4ACAD /* File.swift in Sources */,
+				01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */,
 				01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */,
 				01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */,
 				01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */,
