@@ -32,6 +32,8 @@
 		01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */; };
 		01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67CD2BA961CE00D4ACAD /* TagCollectionView.swift */; };
 		01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */; };
+		01CA67D32BA9731D00D4ACAD /* FavoriteViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67D22BA9731D00D4ACAD /* FavoriteViewPresenter.swift */; };
+		01CA67D52BA97CF400D4ACAD /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67D42BA97CF400D4ACAD /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplication.ext.swift; sourceTree = "<group>"; };
 		01CA67CD2BA961CE00D4ACAD /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
 		01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionCell.swift; sourceTree = "<group>"; };
+		01CA67D22BA9731D00D4ACAD /* FavoriteViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewPresenter.swift; sourceTree = "<group>"; };
+		01CA67D42BA97CF400D4ACAD /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,7 @@
 		01CA67AF2BA42E9E00D4ACAD /* FavoriteModule */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67D12BA972FA00D4ACAD /* Presenter */,
 				01CA67B42BA42EFB00D4ACAD /* View */,
 			);
 			path = FavoriteModule;
@@ -278,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				01CA67B52BA42F2C00D4ACAD /* FavoritView.swift */,
+				01CA67D42BA97CF400D4ACAD /* FavoriteCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +303,14 @@
 				01CA67CF2BA9636F00D4ACAD /* TagCollectionCell.swift */,
 			);
 			path = TagCollection;
+			sourceTree = "<group>";
+		};
+		01CA67D12BA972FA00D4ACAD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67D22BA9731D00D4ACAD /* FavoriteViewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +396,7 @@
 				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
 				01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */,
 				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
+				01CA67D32BA9731D00D4ACAD /* FavoriteViewPresenter.swift in Sources */,
 				01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */,
 				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
@@ -395,6 +410,7 @@
 				01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */,
 				01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */,
 				01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */,
+				01CA67D52BA97CF400D4ACAD /* FavoriteCell.swift in Sources */,
 				01CA67C02BA6CFFD00D4ACAD /* MainPostCell.swift in Sources */,
 				01CA67BE2BA433A600D4ACAD /* MainSreenPresenter.swift in Sources */,
 			);

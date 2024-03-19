@@ -62,8 +62,10 @@ class Builder: BuilderProtocol {
     }
     
     static func createFavoritScreenController() -> UIViewController {
-        let favoritView = FavoritView ()
+        let favoritView = FavoriteView ()
+        let presenter =  FavoriteViewPresenter(view: favoritView)
         
-        return favoritView
+        favoritView.presenter = presenter
+        return UINavigationController(rootViewController: favoritView)
     }
 }

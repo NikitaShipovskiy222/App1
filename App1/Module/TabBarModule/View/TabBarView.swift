@@ -24,7 +24,12 @@ class TabBarView: UITabBarController {
             let tabButton = createTabBarButtun(icon: $0.element, tag: $0.offset , offsetX: offset[$0.offset], isBigButton: $0.offset == 1 ? true : false )
             
             view.addSubview(tabButton)
+            
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        selectedIndex = 2
     }
     
     lazy var selecteItem = UIAction{ [weak self] sender in
