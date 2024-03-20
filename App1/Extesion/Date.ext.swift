@@ -24,4 +24,12 @@ extension Date {
             return "\(dateDifferencesDate) day's ago..."
         }
     }
+    
+    func formattDate() -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en")
+        formatter.dateFormat = "dd LLLL yyyy"
+        
+        return formatter.string(from: self)
+    }
 }
