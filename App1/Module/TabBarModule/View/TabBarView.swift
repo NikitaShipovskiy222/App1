@@ -15,7 +15,7 @@ protocol TabBarViewProtocol: AnyObject {
 class TabBarView: UITabBarController {
 
     var presenter: TabBarViewPresenterProtocol!
-    private let tabs: [UIImage] = [.home,.plus,.liked]
+    private let tabs: [UIImage] = [.home,.plus,.heart]
     override func viewDidLoad() {
         super.viewDidLoad()
         

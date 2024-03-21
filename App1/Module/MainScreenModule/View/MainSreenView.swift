@@ -66,7 +66,7 @@ class MainSreenView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .mainWhite
+        view.backgroundColor = .black
         view.addSubview(collectionView)
         view.addSubview(topMenuView)
         

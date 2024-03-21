@@ -32,7 +32,7 @@ class FavoriteView: UIViewController {
         
         $0.alwaysBounceVertical = true
         $0.backgroundColor = .mainWhite
-        $0.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.resuseId)
+        $0.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.reuseId)
         
         return $0
     }(UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout()))
@@ -71,7 +71,7 @@ extension FavoriteView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.resuseId, for: indexPath) as! FavoriteCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseId, for: indexPath) as! FavoriteCell
         
         if let item = presenter.post?[indexPath.item]{
             cell.configureCell(item: item)

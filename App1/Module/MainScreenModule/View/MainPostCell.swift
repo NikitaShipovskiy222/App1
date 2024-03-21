@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainPostCell: UICollectionViewCell {
+class MainPostCell: UICollectionViewCell, CollectionViewCellProtocol {
     
     static let reuseId = "MainPostCell"
     
@@ -49,7 +49,7 @@ class MainPostCell: UICollectionViewCell {
     }(UIButton(primaryAction: nil))
     
     //MARK: - Interization
-    override init(frame: CGRect){
+    required override init(frame: CGRect){
         super.init(frame: frame)
         contentViewConfig()
     }
@@ -116,7 +116,7 @@ class MainPostCell: UICollectionViewCell {
                 label.numberOfLines = 0
                 label.font = UIFont.systemFont(ofSize: 14)
                 label.text = text
-                label.textColor = .gray
+                label.textColor = .black
             }
         }(UILabel())
     }

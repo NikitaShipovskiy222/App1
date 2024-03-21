@@ -7,7 +7,12 @@
 
 import UIKit
 
-class TagCollectionCell: UICollectionViewCell {
+protocol CollectionViewCellProtocol {
+    static var reuseId: String { get }
+    init(frame: CGRect)
+}
+
+class TagCollectionCell: UICollectionViewCell, CollectionViewCellProtocol {
  
     static let reuseId = "TagCollectionCell"
     
@@ -31,10 +36,9 @@ class TagCollectionCell: UICollectionViewCell {
         
     }(UILabel())
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(tagView)
-        
         setConstraint()
     }
     

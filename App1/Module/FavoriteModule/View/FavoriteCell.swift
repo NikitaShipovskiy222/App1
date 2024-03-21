@@ -7,20 +7,21 @@
 
 import UIKit
 
-class FavoriteCell: UICollectionViewCell {
-    static let resuseId = "FavoriteCell"
+
+
+class FavoriteCell: UICollectionViewCell, CollectionViewCellProtocol {
+    
+    static let reuseId = "FavoriteCell"
     
     lazy var postImage: UIImageView = {
-        
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
         return $0
-        
     }(UIImageView(frame: bounds))
     
     lazy var removeInFavoriteButton: UIButton = {
         $0.frame = CGRect(x: bounds.width - 43, y: 21, width: 25, height: 25)
-        $0.setBackgroundImage(UIImage(named: "Liked"), for: .normal)
+        $0.setBackgroundImage(UIImage(named: "liked"), for: .normal)
         
         return $0
     }(UIButton(primaryAction: nil))
@@ -42,7 +43,7 @@ class FavoriteCell: UICollectionViewCell {
         return $0
     }(UILabel())
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         
         [postImage, removeInFavoriteButton, dateView].forEach{
