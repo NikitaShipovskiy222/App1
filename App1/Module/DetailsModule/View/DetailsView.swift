@@ -39,6 +39,7 @@ class DetailsView: UIViewController {
         $0.backgroundColor = .none
         $0.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: 100, right: 0)
         $0.dataSource = self
+        $0.delegate = self
         $0.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         $0.register(TagCollectionCell.self, forCellWithReuseIdentifier: TagCollectionCell.reuseId)
       $0.register(DetailsPhotoCell.self, forCellWithReuseIdentifier: DetailsPhotoCell.reuseId)
@@ -219,6 +220,25 @@ extension DetailsView: UICollectionViewDataSource {
     
     
     
+}
+extension DetailsView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let itemPhoto = presenter.item.photos[indexPath.item]
+            let photoView = Builder.createPhotoViewController(image: UIImage(named: itemPhoto)) as? PhotoView
+            
+            if photoView != nil{
+                addChild(photoView!)
+                photoView!.view.frame = view.bounds
+                view.addSubview(photoView!.view)
+                
+                photoView!.completion = {
+                    photoView!.view.removeFromSuperview()
+                    photoView!.removeFromParent()
+                }
+            }
+        }
+    }
 }
 
 extension DetailsView: DetailsViewProtocol {

@@ -42,6 +42,8 @@
 		01CA67E62BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E52BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift */; };
 		01CA67E82BAD5DE300D4ACAD /* UITextFiled.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */; };
 		01CA67EA2BAD611C00D4ACAD /* DetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E92BAD611C00D4ACAD /* DetailsMapCell.swift */; };
+		01CA67EF2BAD657000D4ACAD /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67EE2BAD657000D4ACAD /* PhotoView.swift */; };
+		01CA67F12BAD6B1100D4ACAD /* PhotoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67F02BAD6B1100D4ACAD /* PhotoViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		01CA67E52BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAddCommnetCell.swift; sourceTree = "<group>"; };
 		01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFiled.ext.swift; sourceTree = "<group>"; };
 		01CA67E92BAD611C00D4ACAD /* DetailsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMapCell.swift; sourceTree = "<group>"; };
+		01CA67EE2BAD657000D4ACAD /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		01CA67F02BAD6B1100D4ACAD /* PhotoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		01CA67902BA2BE9800D4ACAD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67EB2BAD64D300D4ACAD /* PhotoViewModule */,
 				01CA67D62BAACA2F00D4ACAD /* DetailsModule */,
 				01CA67B02BA42EB100D4ACAD /* CameraModule */,
 				01CA67AF2BA42E9E00D4ACAD /* FavoriteModule */,
@@ -377,6 +382,31 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		01CA67EB2BAD64D300D4ACAD /* PhotoViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67ED2BAD651400D4ACAD /* Presenter */,
+				01CA67EC2BAD651000D4ACAD /* View */,
+			);
+			path = PhotoViewModule;
+			sourceTree = "<group>";
+		};
+		01CA67EC2BAD651000D4ACAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67EE2BAD657000D4ACAD /* PhotoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01CA67ED2BAD651400D4ACAD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67F02BAD6B1100D4ACAD /* PhotoViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +503,7 @@
 				01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */,
 				01CA67DC2BAACA9A00D4ACAD /* DetailsViewPresenter.swift in Sources */,
 				01CA67EA2BAD611C00D4ACAD /* DetailsMapCell.swift in Sources */,
+				01CA67F12BAD6B1100D4ACAD /* PhotoViewPresenter.swift in Sources */,
 				01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */,
 				01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */,
 				01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */,
@@ -480,6 +511,7 @@
 				01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */,
 				01CA67E22BAD515800D4ACAD /* DetailsPhotoCell.swift in Sources */,
 				01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */,
+				01CA67EF2BAD657000D4ACAD /* PhotoView.swift in Sources */,
 				01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */,
 				01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */,
 				01CA67D52BA97CF400D4ACAD /* FavoriteCell.swift in Sources */,
