@@ -41,6 +41,12 @@ class DetailsView: UIViewController {
         $0.dataSource = self
         $0.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         $0.register(TagCollectionCell.self, forCellWithReuseIdentifier: TagCollectionCell.reuseId)
+      $0.register(DetailsPhotoCell.self, forCellWithReuseIdentifier: DetailsPhotoCell.reuseId)
+      $0.register(DetailsDescriptionCell.self, forCellWithReuseIdentifier: DetailsDescriptionCell.reuseId)
+        $0.register(DetailsAddCommnetCell.self, forCellWithReuseIdentifier: DetailsAddCommnetCell.reuseId)
+        $0.register(DetailsMapCell.self, forCellWithReuseIdentifier: DetailsMapCell.reuseId)
+        
+
         return $0
     }(UICollectionView(frame: view.bounds, collectionViewLayout: getCompositionLayout()))
     
@@ -159,10 +165,8 @@ extension DetailsView: UICollectionViewDataSource {
             return presenter.item.photos.count
         case 1:
             return presenter.item.tags?.count ?? 0
-        case 2://4,5:
-            return 1
         case 3:
-            return 3//presenter.item.comments?.count ?? 0
+            return presenter.item.comments?.count ?? 0
         default:
             return 1
         }
@@ -173,10 +177,37 @@ extension DetailsView: UICollectionViewDataSource {
         let item = presenter.item
         
         switch indexPath.section {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsPhotoCell.reuseId, for: indexPath) as! DetailsPhotoCell
+            cell.configureCell(image: item.photos[indexPath.item])
+        
+            return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionCell.reuseId, for: indexPath) as! TagCollectionCell
             
             cell.cellConfigure(tagText: item.tags?[indexPath.item] ?? "" )
+            return cell
+        case 2,3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsDescriptionCell.reuseId, for: indexPath) as! DetailsDescriptionCell
+            
+            if indexPath.section == 2 {
+                cell.configureCell(date: nil, text: item.description ?? "")
+            } else {
+                let comments = item.comments?[indexPath.row]
+                cell.configureCell(date: comments?.date, text: comments?.comment ?? "")
+            }
+            
+            return cell
+        case 4:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsAddCommnetCell.reuseId, for: indexPath) as! DetailsAddCommnetCell
+            cell.completion = { [weak self] comment in
+                guard let self = self else { return }
+            print(comment)
+            }
+            return cell
+        case 5:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsMapCell.reuseId, for: indexPath) as! DetailsMapCell
+            cell.configureCell(coordinate: item.location)
             return cell
         default:
             let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)

@@ -37,6 +37,11 @@
 		01CA67DA2BAACA8400D4ACAD /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67D92BAACA8400D4ACAD /* DetailsView.swift */; };
 		01CA67DC2BAACA9A00D4ACAD /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67DB2BAACA9A00D4ACAD /* DetailsViewPresenter.swift */; };
 		01CA67DF2BAACF2400D4ACAD /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67DE2BAACF2400D4ACAD /* NavigationHeader.swift */; };
+		01CA67E22BAD515800D4ACAD /* DetailsPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E12BAD515800D4ACAD /* DetailsPhotoCell.swift */; };
+		01CA67E42BAD555400D4ACAD /* DetailsDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E32BAD555400D4ACAD /* DetailsDescriptionCell.swift */; };
+		01CA67E62BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E52BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift */; };
+		01CA67E82BAD5DE300D4ACAD /* UITextFiled.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */; };
+		01CA67EA2BAD611C00D4ACAD /* DetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA67E92BAD611C00D4ACAD /* DetailsMapCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +76,11 @@
 		01CA67D92BAACA8400D4ACAD /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		01CA67DB2BAACA9A00D4ACAD /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
 		01CA67DE2BAACF2400D4ACAD /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
+		01CA67E12BAD515800D4ACAD /* DetailsPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPhotoCell.swift; sourceTree = "<group>"; };
+		01CA67E32BAD555400D4ACAD /* DetailsDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDescriptionCell.swift; sourceTree = "<group>"; };
+		01CA67E52BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAddCommnetCell.swift; sourceTree = "<group>"; };
+		01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFiled.ext.swift; sourceTree = "<group>"; };
+		01CA67E92BAD611C00D4ACAD /* DetailsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMapCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +198,7 @@
 				01CA67A62BA427F000D4ACAD /* StringProtocolExtesion.swift */,
 				01CA67C72BA8195800D4ACAD /* Date.ext.swift */,
 				01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */,
+				01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */,
 			);
 			path = Extesion;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 		01CA67D72BAACA4900D4ACAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01CA67E02BAD511500D4ACAD /* Cell */,
 				01CA67D92BAACA8400D4ACAD /* DetailsView.swift */,
 			);
 			path = View;
@@ -352,6 +364,17 @@
 				01CA67DE2BAACF2400D4ACAD /* NavigationHeader.swift */,
 			);
 			path = NavigationHeader;
+			sourceTree = "<group>";
+		};
+		01CA67E02BAD511500D4ACAD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01CA67E12BAD515800D4ACAD /* DetailsPhotoCell.swift */,
+				01CA67E32BAD555400D4ACAD /* DetailsDescriptionCell.swift */,
+				01CA67E52BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift */,
+				01CA67E92BAD611C00D4ACAD /* DetailsMapCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,10 +458,13 @@
 				01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */,
 				01CA67952BA2BF5800D4ACAD /* PasscodeView.swift in Sources */,
 				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
+				01CA67E82BAD5DE300D4ACAD /* UITextFiled.ext.swift in Sources */,
 				01CA67DF2BAACF2400D4ACAD /* NavigationHeader.swift in Sources */,
 				01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */,
+				01CA67E42BAD555400D4ACAD /* DetailsDescriptionCell.swift in Sources */,
 				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
 				01CA67D32BA9731D00D4ACAD /* FavoriteViewPresenter.swift in Sources */,
+				01CA67E62BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift in Sources */,
 				01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */,
 				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
@@ -446,11 +472,13 @@
 				01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */,
 				01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */,
 				01CA67DC2BAACA9A00D4ACAD /* DetailsViewPresenter.swift in Sources */,
+				01CA67EA2BAD611C00D4ACAD /* DetailsMapCell.swift in Sources */,
 				01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */,
 				01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */,
 				01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */,
 				01CA67C42BA6D24600D4ACAD /* File.swift in Sources */,
 				01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */,
+				01CA67E22BAD515800D4ACAD /* DetailsPhotoCell.swift in Sources */,
 				01CA679F2BA2C77C00D4ACAD /* UIVew.ext.swift in Sources */,
 				01CA679C2BA2C1C000D4ACAD /* PasscodePresenter.swift in Sources */,
 				01CA67A72BA427F000D4ACAD /* StringProtocolExtesion.swift in Sources */,
