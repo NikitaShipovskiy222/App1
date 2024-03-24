@@ -9,4 +9,6 @@ import UIKit
 
 extension NSNotification.Name {
     static let hideTabBar = NSNotification.Name("hideTabBar")
+    static let goToMain = NSNotification.Name("goToMain")
+
 }
