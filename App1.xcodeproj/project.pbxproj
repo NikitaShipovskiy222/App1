@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018835A52BB008CB00AF5897 /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */; };
 		01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA677C2BA2BD1400D4ACAD /* AppDelegate.swift */; };
 		01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA677E2BA2BD1400D4ACAD /* SceneDelegate.swift */; };
 		01CA67862BA2BD1700D4ACAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CA67852BA2BD1700D4ACAD /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		01CA67792BA2BD1400D4ACAD /* App1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CA677C2BA2BD1400D4ACAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CA677E2BA2BD1400D4ACAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				01CA67C72BA8195800D4ACAD /* Date.ext.swift */,
 				01CA67C92BA8242F00D4ACAD /* UIAplication.ext.swift */,
 				01CA67E72BAD5DE300D4ACAD /* UITextFiled.ext.swift */,
+				018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */,
 			);
 			path = Extesion;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */,
 				01CA67952BA2BF5800D4ACAD /* PasscodeView.swift in Sources */,
 				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
+				018835A52BB008CB00AF5897 /* NSNotification.Name.ext.swift in Sources */,
 				01CA67E82BAD5DE300D4ACAD /* UITextFiled.ext.swift in Sources */,
 				01CA67DF2BAACF2400D4ACAD /* NavigationHeader.swift in Sources */,
 				01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */,

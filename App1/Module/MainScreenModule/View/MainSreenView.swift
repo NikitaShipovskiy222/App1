@@ -75,7 +75,9 @@ class MainSreenView: UIViewController {
 
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": false])
+    }
 
 }
 

@@ -31,8 +31,8 @@ class PhotoView: UIViewController, PhotoViewProtocol {
         $0.maximumZoomScale = 10
         $0.backgroundColor = .white
         $0.addSubview(image)
-        $0.showsVerticalScrollIndicator = true
-        $0.showsHorizontalScrollIndicator = true
+        $0.showsVerticalScrollIndicator = false
+        $0.showsHorizontalScrollIndicator = false
         return $0
     }(UIScrollView(frame: view.bounds))
     
@@ -48,6 +48,7 @@ class PhotoView: UIViewController, PhotoViewProtocol {
         $0.image = presenter.image
         $0.contentMode = .scaleAspectFit
         $0.isUserInteractionEnabled = true
+        $0.addGestureRecognizer(tapGesture)
         return $0
     }(UIImageView())
     
@@ -87,5 +88,13 @@ extension PhotoView: UIScrollViewDelegate {
         return image
     }
     
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if scrollView.contentSize.height > view.frame.height {
+            image.center.y = scrollView.contentSize.height/2
+        } else {
+            image.center.y = view.center.y
+        }
+        
+    }
     
 }

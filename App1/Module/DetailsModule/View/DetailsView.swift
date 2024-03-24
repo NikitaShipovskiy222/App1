@@ -13,6 +13,8 @@ protocol DetailsViewProtocol: AnyObject {
 
 class DetailsView: UIViewController {
     var presenter: DetailsViewPresenterProtocol!
+    var photoView: PhotoView!
+    
     private var menuViewHeigt = UIApplication.topSafeAreay + 50
     
     lazy var topMenuView: UIView = {
@@ -64,6 +66,7 @@ class DetailsView: UIViewController {
         navigationItem.setHidesBackButton(true, animated: true)
         navigationController?.navigationBar.isHidden = true
         
+        NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": true])
     }
     
     private func setupPageHeader() {
@@ -202,7 +205,7 @@ extension DetailsView: UICollectionViewDataSource {
         case 4:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailsAddCommnetCell.reuseId, for: indexPath) as! DetailsAddCommnetCell
             cell.completion = { [weak self] comment in
-                guard let self = self else { return }
+                guard let _ = self else { return }
             print(comment)
             }
             return cell
@@ -225,16 +228,17 @@ extension DetailsView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             let itemPhoto = presenter.item.photos[indexPath.item]
-            let photoView = Builder.createPhotoViewController(image: UIImage(named: itemPhoto)) as? PhotoView
+            photoView = Builder.createPhotoViewController(image: UIImage(named: itemPhoto)) as? PhotoView
             
             if photoView != nil{
                 addChild(photoView!)
                 photoView!.view.frame = view.bounds
                 view.addSubview(photoView!.view)
                 
-                photoView!.completion = {
-                    photoView!.view.removeFromSuperview()
-                    photoView!.removeFromParent()
+                photoView!.completion = { [weak self] in
+                    self?.photoView!.view.removeFromSuperview()
+                    self?.photoView!.removeFromParent()
+                    self?.photoView = nil
                 }
             }
         }
