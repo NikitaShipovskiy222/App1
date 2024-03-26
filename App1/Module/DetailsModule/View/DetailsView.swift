@@ -70,7 +70,7 @@ class DetailsView: UIViewController {
     }
     
     private func setupPageHeader() {
-        let headerView = navigationHeader.getNavigationHeader(type: .back)
+        let headerView = navigationHeader.getNavigationHeader(type: .detailsView)
         headerView.frame.origin.y = UIApplication.topSafeAreay
         view.addSubview(headerView)
     }

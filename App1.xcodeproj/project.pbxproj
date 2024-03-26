@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		013F29E22BB1DCD500C837E0 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F29E12BB1DCD500C837E0 /* CameraService.swift */; };
+		013F29F02BB2B09B00C837E0 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F29EF2BB2B09B00C837E0 /* AddPostView.swift */; };
+		013F29F22BB2B0DB00C837E0 /* AddPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F29F12BB2B0DB00C837E0 /* AddPostPresenter.swift */; };
 		018835A52BB008CB00AF5897 /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */; };
 		018835A82BB00DAE00AF5897 /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018835A72BB00DAE00AF5897 /* CameraViewPresenter.swift */; };
 		01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA677C2BA2BD1400D4ACAD /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		013F29E12BB1DCD500C837E0 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		013F29EF2BB2B09B00C837E0 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		013F29F12BB2B0DB00C837E0 /* AddPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenter.swift; sourceTree = "<group>"; };
 		018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		018835A72BB00DAE00AF5897 /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
 		01CA67792BA2BD1400D4ACAD /* App1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,39 @@
 			path = CameraService;
 			sourceTree = "<group>";
 		};
+		013F29EA2BB2B01E00C837E0 /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				013F29EE2BB2B04A00C837E0 /* Model */,
+				013F29EC2BB2B03400C837E0 /* View */,
+				013F29EB2BB2B02A00C837E0 /* Presenter */,
+			);
+			path = AddPost;
+			sourceTree = "<group>";
+		};
+		013F29EB2BB2B02A00C837E0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				013F29F12BB2B0DB00C837E0 /* AddPostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		013F29EC2BB2B03400C837E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				013F29EF2BB2B09B00C837E0 /* AddPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		013F29EE2BB2B04A00C837E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		018835A62BB00D9E00AF5897 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +193,7 @@
 		01CA67902BA2BE9800D4ACAD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				013F29EA2BB2B01E00C837E0 /* AddPost */,
 				01CA67EB2BAD64D300D4ACAD /* PhotoViewModule */,
 				01CA67D62BAACA2F00D4ACAD /* DetailsModule */,
 				01CA67B02BA42EB100D4ACAD /* CameraModule */,
@@ -521,6 +559,7 @@
 				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
 				01CA67D32BA9731D00D4ACAD /* FavoriteViewPresenter.swift in Sources */,
 				01CA67E62BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift in Sources */,
+				013F29F22BB2B0DB00C837E0 /* AddPostPresenter.swift in Sources */,
 				01CA67CA2BA8242F00D4ACAD /* UIAplication.ext.swift in Sources */,
 				01CA67BA2BA42F7400D4ACAD /* TabBarView.swift in Sources */,
 				01CA67992BA2BF8900D4ACAD /* Builder.swift in Sources */,
@@ -528,6 +567,7 @@
 				01CA677F2BA2BD1400D4ACAD /* SceneDelegate.swift in Sources */,
 				01CA67CE2BA961CE00D4ACAD /* TagCollectionView.swift in Sources */,
 				01CA67DC2BAACA9A00D4ACAD /* DetailsViewPresenter.swift in Sources */,
+				013F29F02BB2B09B00C837E0 /* AddPostView.swift in Sources */,
 				01CA67EA2BAD611C00D4ACAD /* DetailsMapCell.swift in Sources */,
 				018835A82BB00DAE00AF5897 /* CameraViewPresenter.swift in Sources */,
 				01CA67F12BAD6B1100D4ACAD /* PhotoViewPresenter.swift in Sources */,

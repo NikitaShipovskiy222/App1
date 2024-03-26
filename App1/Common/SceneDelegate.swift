@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = Builder.createTabBarController() //Builder.getPasscodeController(passcodeState: checkIssetPasscode(), sceneDelegate: self)
+        window?.rootViewController = Builder.createAddPostViewController(photos: [.img1,.img2,.img3])
+       // Builder.createTabBarController() //Builder.getPasscodeController(passcodeState: checkIssetPasscode(), sceneDelegate: self)
         window?.makeKeyAndVisible()
     }
     
