@@ -33,7 +33,7 @@ class CameraViewPresenter: CameraViewPresenterProtocol {
         self?.cameraService.stopSession()
     }
     
-  lazy var switchCamera: UIAction? = UIAction { [weak self]_ in
+  lazy var switchCamera: UIAction? = UIAction { [weak self] _ in
       self?.cameraService.switchCamera()
     }
     

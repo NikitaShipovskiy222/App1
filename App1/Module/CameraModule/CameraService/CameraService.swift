@@ -104,7 +104,7 @@ class CameraService: CameraServiceProtocol {
     }
     
     private func currentDevice() -> AVCaptureDevice? {
-        let sessionDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTripleCamera, .builtInDualCamera, .builtInWideAngleCamera], mediaType: .video, position: .back)
+        let sessionDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTripleCamera, .builtInDualCamera, .builtInWideAngleCamera, .builtInDualWideCamera], mediaType: .video, position: .back)
         
         guard let device = sessionDevice.devices.first else {return nil}
         return device

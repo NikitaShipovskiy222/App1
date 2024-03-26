@@ -90,7 +90,8 @@ class CameraView: UIViewController, CameraViewProtocol {
     
     private func checkPermisions() {
         let cameraStatusAuth = AVCaptureDevice.authorizationStatus(for: .video)
-        switch cameraStatusAuth{
+
+        switch cameraStatusAuth {
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) { auht in
                 if !auht {
@@ -141,6 +142,8 @@ extension CameraView: AVCapturePhotoCaptureDelegate {
             self.shotsCollectioView.reloadData()
         }
     }
+    
+    
 }
 
 extension CameraView: UICollectionViewDataSource {
