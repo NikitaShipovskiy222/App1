@@ -34,11 +34,63 @@ class AddPostView: UIViewController, AddPostViewProtocol {
         
     }
     
+    
+    
+    lazy var collectionView: UICollectionView = {
+        $0.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: 100, right: 0)
+        $0.backgroundColor = .none
+        $0.dataSource = self
+        $0.showsVerticalScrollIndicator = false
+        $0.register(AddPostPhotoCell.self, forCellWithReuseIdentifier: AddPostPhotoCell.reuseId)
+        $0.register(AddPostTagCell.self, forCellWithReuseIdentifier: AddPostTagCell.reuseId)
+        $0.register(AddPostFieldCell.self, forCellWithReuseIdentifier: AddPostFieldCell.reuseId)
+        return $0
+    }(UICollectionView(frame: view.bounds, collectionViewLayout: getCompositionLayout()))
+    
+    
+    lazy var saveButton: UIButton = {
+        $0.backgroundColor = .lightGray
+        $0.setTitle("Save", for: .normal)
+        $0.setTitleColor(.darkGray, for: .normal)
+        $0.layer.cornerRadius = 27.5
+        return $0
+    }(UIButton(frame: CGRect(x: 30, y: view.bounds.height - 98, width: view.bounds.width - 60, height: 55), primaryAction: saveButtonAction))
+      
+      lazy var saveButtonAction = UIAction { _ in
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainWhite
+        view.addSubview(collectionView)
+        view.addSubview(topMenuView)
+        view.addSubview(saveButton)
         setupHeader()
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditing)))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nibName)
 
+    }
+    
+    @objc func keyboardChange(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        
+        let keyboardViewFrame = view.convert(keyboardValue.cgRectValue, from: view.window)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            collectionView.contentInset.bottom = 100
+        }else{
+            collectionView.contentInset.bottom = keyboardViewFrame.height
+        }
+    }
+    
+    @objc func endEditing(){
+        view.endEditing(true)
     }
     
     private func setupHeader() {
@@ -47,4 +99,101 @@ class AddPostView: UIViewController, AddPostViewProtocol {
         view.addSubview(header)
     }
 
+}
+
+extension AddPostView {
+    
+    private func getCompositionLayout() -> UICollectionViewCompositionalLayout {
+        UICollectionViewCompositionalLayout { [weak self] section, _ in
+            switch section {
+            case 0:
+                return self?.createPhotoSecton()
+            case 1:
+                return self?.createTagSection()
+            default:
+                return self?.createForSection()
+                
+                
+            }
+        
+        }
+    }
+    
+    private func createPhotoSecton() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(185), heightDimension: .absolute(260))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 30, bottom: 30, trailing: 30)
+        section.orthogonalScrollingBehavior = .groupPaging
+        return section
+    }
+    
+    private func createTagSection() -> NSCollectionLayoutSection {
+        let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(110), heightDimension: .estimated(10))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [.init(layoutSize: groupSize)])
+        
+        group.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: nil, top: nil, trailing: .fixed(10), bottom: nil)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30)
+        
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
+    }
+    
+    private func createForSection() -> NSCollectionLayoutSection{
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(185))
+        
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
+        
+        return section
+        }
+    }
+
+
+extension AddPostView: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return presenter.photos.count
+        case 1:
+            return presenter.tags.count
+        default:
+            return 1
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddPostPhotoCell.reuseId, for: indexPath) as! AddPostPhotoCell
+            let image = presenter.photos[indexPath.row]
+            cell.setCellImage(image: image)
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddPostTagCell.reuseId, for: indexPath) as! AddPostTagCell
+            let tag = presenter.tags[indexPath.row]
+            cell.setTagText(tagText: tag)
+            return cell
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddPostFieldCell.reuseId, for: indexPath) as! AddPostFieldCell
+            return cell
+        }
+    }
+    
+    
 }
