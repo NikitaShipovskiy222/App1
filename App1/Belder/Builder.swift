@@ -96,4 +96,13 @@ class Builder: BuilderProtocol {
         addPostView.presenter = presenter
         return addPostView
     }
+    
+    
+    static func createSettingsViewController() -> UIViewController {
+        let settingView = SettingsView()
+        let presenter = SettingsPresenter(view: settingView)
+        
+        settingView.presenter = presenter
+        return UINavigationController(rootViewController: settingView)
+    }
 }

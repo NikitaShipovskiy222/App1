@@ -20,7 +20,7 @@ class TagCollectionCell: UICollectionViewCell, CollectionViewCellProtocol {
         .configure(view: $0) { [weak self] tagView in
             
             guard let self = self else {return}
-            tagView.backgroundColor = UIColor(white: 1 , alpha: 0.2)
+            tagView.backgroundColor = UIColor(white: 0.5 , alpha: 0.2)
             tagView.layer.cornerRadius = 15
             tagView.addSubview(self.tagLabel)
         }

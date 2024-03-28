@@ -13,6 +13,10 @@
 		013F2A152BB3E73200C837E0 /* AddPostPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2A142BB3E73200C837E0 /* AddPostPhotoCell.swift */; };
 		013F2A172BB3ED9000C837E0 /* AddPostTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2A162BB3ED9000C837E0 /* AddPostTagCell.swift */; };
 		013F2A192BB3F3B400C837E0 /* AddPostFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2A182BB3F3B400C837E0 /* AddPostFieldCell.swift */; };
+		013F2AA42BB54CA000C837E0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2AA32BB54CA000C837E0 /* SettingsView.swift */; };
+		013F2AA62BB54D0500C837E0 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2AA52BB54D0500C837E0 /* SettingsPresenter.swift */; };
+		013F2AA92BB5526800C837E0 /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2AA82BB5526800C837E0 /* SettingsItems.swift */; };
+		013F2AAC2BB5543C00C837E0 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F2AAB2BB5543C00C837E0 /* SettingsCell.swift */; };
 		018835A52BB008CB00AF5897 /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */; };
 		018835A82BB00DAE00AF5897 /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018835A72BB00DAE00AF5897 /* CameraViewPresenter.swift */; };
 		01CA677D2BA2BD1400D4ACAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA677C2BA2BD1400D4ACAD /* AppDelegate.swift */; };
@@ -61,6 +65,10 @@
 		013F2A142BB3E73200C837E0 /* AddPostPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPhotoCell.swift; sourceTree = "<group>"; };
 		013F2A162BB3ED9000C837E0 /* AddPostTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTagCell.swift; sourceTree = "<group>"; };
 		013F2A182BB3F3B400C837E0 /* AddPostFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostFieldCell.swift; sourceTree = "<group>"; };
+		013F2AA32BB54CA000C837E0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		013F2AA52BB54D0500C837E0 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		013F2AA82BB5526800C837E0 /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
+		013F2AAB2BB5543C00C837E0 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		018835A42BB008CB00AF5897 /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		018835A72BB00DAE00AF5897 /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
 		01CA67792BA2BD1400D4ACAD /* App1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +175,49 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		013F2AA02BB54C6100C837E0 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				013F2AA72BB5524600C837E0 /* Model */,
+				013F2AA22BB54C8200C837E0 /* Presenter */,
+				013F2AA12BB54C7500C837E0 /* View */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		013F2AA12BB54C7500C837E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				013F2AAA2BB5542600C837E0 /* Cell */,
+				013F2AA32BB54CA000C837E0 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		013F2AA22BB54C8200C837E0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				013F2AA52BB54D0500C837E0 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		013F2AA72BB5524600C837E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				013F2AA82BB5526800C837E0 /* SettingsItems.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		013F2AAA2BB5542600C837E0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				013F2AAB2BB5543C00C837E0 /* SettingsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		018835A62BB00D9E00AF5897 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +261,7 @@
 		01CA67902BA2BE9800D4ACAD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				013F2AA02BB54C6100C837E0 /* SettingsView */,
 				013F29EA2BB2B01E00C837E0 /* AddPost */,
 				01CA67EB2BAD64D300D4ACAD /* PhotoViewModule */,
 				01CA67D62BAACA2F00D4ACAD /* DetailsModule */,
@@ -570,11 +622,13 @@
 				01CA67C22BA6D05800D4ACAD /* MainPostHeader.swift in Sources */,
 				018835A52BB008CB00AF5897 /* NSNotification.Name.ext.swift in Sources */,
 				01CA67E82BAD5DE300D4ACAD /* UITextFiled.ext.swift in Sources */,
+				013F2AA62BB54D0500C837E0 /* SettingsPresenter.swift in Sources */,
 				01CA67DF2BAACF2400D4ACAD /* NavigationHeader.swift in Sources */,
 				01CA67C82BA8195800D4ACAD /* Date.ext.swift in Sources */,
 				01CA67E42BAD555400D4ACAD /* DetailsDescriptionCell.swift in Sources */,
 				013F2A152BB3E73200C837E0 /* AddPostPhotoCell.swift in Sources */,
 				01CA67A22BA4223500D4ACAD /* KeychainManager.swift in Sources */,
+				013F2AA42BB54CA000C837E0 /* SettingsView.swift in Sources */,
 				01CA67D32BA9731D00D4ACAD /* FavoriteViewPresenter.swift in Sources */,
 				01CA67E62BAD5D2300D4ACAD /* DetailsAddCommnetCell.swift in Sources */,
 				013F29F22BB2B0DB00C837E0 /* AddPostPresenter.swift in Sources */,
@@ -594,6 +648,7 @@
 				01CA67B22BA42EE800D4ACAD /* MainSreenView.swift in Sources */,
 				01CA67BC2BA42FA700D4ACAD /* TabBarViewPresenter.swift in Sources */,
 				01CA67B82BA42F3F00D4ACAD /* CameraView.swift in Sources */,
+				013F2AA92BB5526800C837E0 /* SettingsItems.swift in Sources */,
 				01CA67C42BA6D24600D4ACAD /* File.swift in Sources */,
 				01CA67D02BA9636F00D4ACAD /* TagCollectionCell.swift in Sources */,
 				01CA67E22BAD515800D4ACAD /* DetailsPhotoCell.swift in Sources */,
@@ -605,6 +660,7 @@
 				01CA67D52BA97CF400D4ACAD /* FavoriteCell.swift in Sources */,
 				01CA67C02BA6CFFD00D4ACAD /* MainPostCell.swift in Sources */,
 				01CA67BE2BA433A600D4ACAD /* MainSreenPresenter.swift in Sources */,
+				013F2AAC2BB5543C00C837E0 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
